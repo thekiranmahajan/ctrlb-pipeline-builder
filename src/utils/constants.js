@@ -1,4 +1,4 @@
-import { DestinationNode, SourceNode } from "../components";
+import { CustomEdge, DestinationNode, SourceNode } from "../components";
 
 export const initialNodes = [
   {
@@ -26,4 +26,7 @@ export const initialEdges = [];
 export const nodeTypes = {
   sourceNode: SourceNode,
   destinationNode: DestinationNode,
+};
+export const edgeTypes = {
+  customEdge: CustomEdge,
 };

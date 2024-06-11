@@ -9,22 +9,35 @@ import ReactFlow, {
   applyNodeChanges,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import { initialNodes, initialEdges, nodeTypes } from "./utils/constants";
+import {
+  initialNodes,
+  initialEdges,
+  nodeTypes,
+  edgeTypes,
+} from "./utils/constants";
 
 const App = () => {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
 
   const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+    (changes) => setNodes((prevNodes) => applyNodeChanges(changes, prevNodes)),
     [setNodes]
   );
   const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    (changes) => setEdges((prevEdges) => applyEdgeChanges(changes, prevEdges)),
     [setEdges]
   );
   const onConnect = useCallback(
-    (connection) => setEdges((eds) => addEdge(connection, eds)),
+    (connection) => {
+      const edge = {
+        ...connection,
+        animated: true,
+        id: `${edges.length + 1}`,
+        type: "customEdge",
+      };
+      setEdges((prevEdges) => addEdge(edge, prevEdges));
+    },
     [setEdges]
   );
 
@@ -37,6 +50,7 @@ const App = () => {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         fitView
       >
         <Controls />
