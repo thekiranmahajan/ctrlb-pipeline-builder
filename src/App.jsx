@@ -14,6 +14,7 @@ import {
   nodeTypes,
   edgeTypes,
 } from "./utils/constants";
+import { AddNodesMenu } from "./components";
 
 const App = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -33,7 +34,8 @@ const App = () => {
   );
 
   return (
-    <div className="h-screen w-full font-spaceGrotesk">
+    <div className="h-screen w-screen font-spaceGrotesk">
+      <AddNodesMenu setNodes={setNodes} />
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
