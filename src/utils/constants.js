@@ -3,15 +3,15 @@ import { DestinationNode, SourceNode } from "../components";
 export const initialNodes = [
   {
     id: "1",
-    position: { x: -100, y: 100 },
-    data: { label: "source" },
-    type: "source",
+    position: { x: -1000, y: 100 },
+    data: { title: "Source 1" },
+    type: "sourceNode",
   },
   {
     id: "2",
     position: { x: 100, y: 100 },
-    data: { label: "Destinaton" },
-    type: "destination",
+    data: { title: "Destinaton 1" },
+    type: "destinationNode",
   },
 ];
 

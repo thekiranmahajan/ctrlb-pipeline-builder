@@ -29,7 +29,7 @@ const App = () => {
   );
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full font-spaceGrotesk">
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
