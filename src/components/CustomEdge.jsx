@@ -35,7 +35,7 @@ const CustomEdge = ({
 
       <EdgeLabelRenderer>
         <button
-          className="h-8 w-8 absolute opacity-30 scale-95 hover:opacity-100 hover:scale-100 transition-transform"
+          className="h-8 w-8 absolute opacity-30 hover:opacity-100 nodrag nopans"
           style={{
             transform: `translate(-50%, -50%) translate(${labelX}px,${labelY}px)`,
             pointerEvents: "all",
