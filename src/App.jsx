@@ -9,18 +9,7 @@ import ReactFlow, {
   applyNodeChanges,
 } from "reactflow";
 import "reactflow/dist/style.css";
-
-const initialNodes = [
-  {
-    id: "1",
-    data: { label: "source" },
-    position: { x: -400, y: 50 },
-    type: "input",
-  },
-  { id: "2", data: { label: "destination" }, position: { x: 400, y: 50 } },
-];
-
-const initialEdges = [];
+import { initialNodes, initialEdges, nodeTypes } from "./utils/constants";
 
 const App = () => {
   const [nodes, setNodes] = useState(initialNodes);
@@ -28,24 +17,26 @@ const App = () => {
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    []
+    [setNodes]
   );
   const onEdgesChange = useCallback(
     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    []
+    [setEdges]
+  );
+  const onConnect = useCallback(
+    (connection) => setEdges((eds) => addEdge(connection, eds)),
+    [setEdges]
   );
 
-  const onConnect = useCallback((params) =>
-    setEdges((eds) => addEdge(params, eds))
-  );
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-full">
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
         edges={edges}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
         fitView
       >
         <Controls />
