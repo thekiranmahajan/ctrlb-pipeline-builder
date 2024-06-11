@@ -4,7 +4,7 @@ import { Handle, Position } from "reactflow";
 
 const DestinationNode = ({ data: { title } }) => {
   return (
-    <div className="h-20 w-44 border border-black rounded-md p-1 flex gap-2">
+    <div className="h-20 w-44 border border-black rounded-md p-1 flex gap-2 bg-white">
       <div className="flex flex-col flex-grow">
         <h3 className="-mt-1 self-end font-bold">{title}</h3>
         <h5 className="mt-auto mr-auto">Destination</h5>

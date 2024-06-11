@@ -4,7 +4,7 @@ import { Handle, Position } from "reactflow";
 
 const SourceNode = ({ data: { title } }) => {
   return (
-    <div className="h-20 w-44 border border-black rounded-md p-1 flex gap-2">
+    <div className="h-20 w-44 border border-black rounded-md p-1 flex gap-2 bg-white">
       <div className="bg-gray-300 h-full w-5 rounded-sm flex items-center justify-center ">
         <img className="h-4 w-10" src={arrowImg} alt="arrow-to-right" />
       </div>
