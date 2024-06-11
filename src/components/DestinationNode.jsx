@@ -1,5 +1,6 @@
 import React from "react";
 import arrowImg from "../assets/arrow.svg";
+import { Handle, Position } from "reactflow";
 
 const DestinationNode = ({ data: { title } }) => {
   return (
@@ -15,6 +16,11 @@ const DestinationNode = ({ data: { title } }) => {
           alt="arrow-to-right"
         />
       </div>
+      <Handle
+        type="target"
+        position={Position.Left}
+        className="bg-lime-400 -left-[0.4rem] h-8 w-1 rounded-none outline-none border-none"
+      />
     </div>
   );
 };

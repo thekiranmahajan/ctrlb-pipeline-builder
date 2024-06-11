@@ -8,6 +8,12 @@ export const initialNodes = [
     type: "sourceNode",
   },
   {
+    id: "3",
+    position: { x: -1000, y: 500 },
+    data: { title: "Source 2" },
+    type: "sourceNode",
+  },
+  {
     id: "2",
     position: { x: 100, y: 100 },
     data: { title: "Destinaton 1" },
