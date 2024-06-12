@@ -49,33 +49,35 @@ To run the application locally, follow these steps:
 ## Project Structure
 
 The project follows a standard folder structure as outlined below:
+```
+ctrlb-pipeline-builder/
+├── node_modules/
+├── src/
+│   ├── assets/
+│   │   ├── arrow.svg
+│   │   └── cross.svg
+│   ├── components/
+│   │   ├── AddNodesMenu.jsx
+│   │   ├── CustomEdge.jsx
+│   │   ├── DestinationNode.jsx
+│   │   ├── index.js
+│   │   └── SourceNode.jsx
+│   ├── utils/
+│   │   └── constants.js
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── vite.config.js
+```
 
-```
-/src
-  /assets          # Images and other static assets
-    arrow.svg
-    cross.svg
-  /components      # Reusable React components
-    AddNodesMenu.jsx
-    CustomEdge.jsx
-    DestinationNode.jsx
-    index.js
-    SourceNode.jsx
-  /utils           # Utility functions and constants
-    constants.js
-  App.jsx          # Main application component
-  index.css        # Global styles
-  main.jsx         # Entry point for React application
-.gitignore
-.eslintrc.cjs
-index.html
-package-lock.json
-package.json
-postcss.config.js
-README.md
-tailwind.config.js
-vite.config.js
-```
 
 ## Additional Notes
 
