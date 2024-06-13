@@ -15,6 +15,13 @@ This project is a pipeline builder application built using React, Vite, Tailwind
 - **Modular Code:** The code is organized into reusable components to ensure maintainability and scalability.
 - **Standard Folder Structure:** The project follows a standard folder structure, enhancing clarity and organization.
 
+## Preview
+![image](https://github.com/thekiranmahajan/ctrlb-pipeline-builder/assets/91893931/39d5708e-706d-4f86-ab3a-5fe1ef98a74f)
+
+
+## Live Demo
+https://ctrlb-pipeline-builder.vercel.app/
+
 ## Installation
 
 To run the application locally, follow these steps:
